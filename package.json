@@ -1,11 +1,14 @@
 {
 	"name": "pikpak-js",
-	"version": "1.1.0",
+	"version": "1.1.1",
 	"author": {
 		"name": "chris-lsn",
 		"email": "contact@chrisleung.me"
 	},
-	"files": ["build/index.js", "build/index.d.ts"],
+	"files": [
+		"build/index.js",
+		"build/index.d.ts"
+	],
 	"module": "index.ts",
 	"type": "module",
 	"main": "build/index.js",
