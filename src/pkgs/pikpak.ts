@@ -130,20 +130,21 @@ export default class PikPak {
 	 */
 	public async createTask(
 		url: string,
-		parentFolderId: string,
-		name: string,
+		parentFolderId?: string,
+		name?: string,
 	): Promise<IPikPakCreateTaskResponse> {
 		const downloadUrk = `${this.PIKPAK_API_HOST}/drive/v1/files`;
-		const downloadData = {
+		const downloadData: Record<string, unknown> = {
 			kind: ResourceKind.FILE,
 			parmas: {
 				from: "manual",
 			},
-			name: name,
 			upload_type: "UPLOAD_TYPE_URL",
 			url: { url: url },
-			parent_id: parentFolderId,
 		};
+
+		if (name) downloadData.name = name;
+		if (parentFolderId) downloadData.parent_id = parentFolderId;
 
 		const downloadResponse = await fetch(downloadUrk, {
 			method: "POST",
