@@ -5,9 +5,7 @@
 		"name": "chris-lsn",
 		"email": "contact@chrisleung.me"
 	},
-	"files": [
-		"build/index.js"
-	],
+	"files": ["build/index.js", "build/index.d.ts"],
 	"module": "index.ts",
 	"type": "module",
 	"main": "build/index.js",
