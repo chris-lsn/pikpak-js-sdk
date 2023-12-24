@@ -5,18 +5,15 @@
 		"name": "chris-lsn",
 		"email": "contact@chrisleung.me"
 	},
-	"files": [
-		"build/index.js"
-	],
+	"files": ["build/index.js"],
 	"module": "index.ts",
 	"type": "module",
 	"main": "build/index.js",
 	"scripts": {
-		"dev": "bun run --watch index.ts",
-		"test": "bun test ./tests/*.ts",
-		"build": "bun build ./index.ts --outdir ./build",
+		"dev": "bun run --watch ./src/index.ts",
+		"test": "bun test ./src/tests/*.ts",
+		"build": "bun run build.ts",
 		"check": "bunx @biomejs/biome check --apply .",
-		"publish": "npm publish",
 		"release": "bunx release-it",
 		"prepare": "husky install"
 	},
@@ -25,6 +22,7 @@
 		"@commitlint/cli": "^18.4.3",
 		"@commitlint/config-conventional": "^18.4.3",
 		"@release-it/conventional-changelog": "^8.0.1",
+		"bun-plugin-dts": "^0.2.1",
 		"bun-types": "latest",
 		"husky": "^8.0.3",
 		"release-it": "^17.0.1"
