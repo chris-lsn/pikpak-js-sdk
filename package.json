@@ -1,0 +1,36 @@
+{
+	"name": "pikpak-js",
+	"version": "0.0.1",
+	"author": {
+		"name": "chris-lsn",
+		"email": "contact@chrisleung.me"
+	},
+	"files": ["build/index.js"],
+	"module": "index.ts",
+	"type": "module",
+	"main": "build/index.js",
+	"scripts": {
+		"dev": "bun run --watch index.ts",
+		"test": "bun test ./tests/*.ts",
+		"build": "bun build ./index.ts --outdir ./build",
+		"check": "bunx @biomejs/biome check --apply .",
+		"publish": "npm publish",
+		"release": "bunx release-it",
+		"prepare": "husky install"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "1.4.1",
+		"@commitlint/cli": "^18.4.3",
+		"@commitlint/config-conventional": "^18.4.3",
+		"@release-it/conventional-changelog": "^8.0.1",
+		"bun-types": "latest",
+		"husky": "^8.0.3",
+		"release-it": "^17.0.1"
+	},
+	"peerDependencies": {
+		"typescript": "^5.0.0"
+	},
+	"dependencies": {
+		"jwt-decode": "^4.0.0"
+	}
+}
