@@ -5,9 +5,7 @@
 		"name": "chris-lsn",
 		"email": "contact@chrisleung.me"
 	},
-	"files": [
-		"build/index.js"
-	],
+	"files": ["build/index.js"],
 	"module": "index.ts",
 	"type": "module",
 	"main": "build/index.js",
@@ -16,14 +14,16 @@
 		"test": "bun test ./tests/*.ts",
 		"build": "bun build ./index.ts --outdir ./build",
 		"check": "bunx @biomejs/biome check --apply .",
-		"publish": "npm publish"
+		"publish": "npm publish",
+		"release": "bunx release-it"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "1.4.1",
 		"@commitlint/cli": "^18.4.3",
 		"@commitlint/config-conventional": "^18.4.3",
 		"bun-types": "latest",
-		"husky": "^8.0.3"
+		"husky": "^8.0.3",
+		"release-it": "^17.0.1"
 	},
 	"peerDependencies": {
 		"typescript": "^5.0.0"
