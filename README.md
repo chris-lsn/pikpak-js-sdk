@@ -1,5 +1,7 @@
 # pikpak-js-sdk (unofficial)
 
+[![Code quality](https://github.com/chris-lsn/pikpak-js-sdk/actions/workflows/pull-request.yml/badge.svg?branch=main)](https://github.com/chris-lsn/pikpak-js-sdk/actions/workflows/pull-request.yml)
+
 This is a simple javascript SDK for the PikPak API.
 
 ## Installation
