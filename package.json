@@ -5,10 +5,12 @@
 		"name": "chris-lsn",
 		"email": "contact@chrisleung.me"
 	},
-	"files": [
-		"build/index.js",
-		"build/index.d.ts"
-	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/chris-lsn/pikpak-js-sdk.git"
+	},
+	"homepage": "https://github.com/chris-lsn/pikpak-js-sdk",
+	"files": ["build/index.js", "build/index.d.ts"],
 	"module": "index.ts",
 	"type": "module",
 	"main": "build/index.js",
