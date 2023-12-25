@@ -1,0 +1,14 @@
+{
+	"name": "Ubuntu Dev Container",
+	"image": "mcr.microsoft.com/vscode/devcontainers/base:ubuntu",
+	"features": {
+		"ghcr.io/shyim/devcontainers-features/bun:0": "0.0.1",
+		"ghcr.io/devcontainers-contrib/features/act:1": "1.0.14"
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": ["biomejs.biome"]
+		}
+	},
+	"remoteUser": "vscode"
+}
