@@ -1,3 +1,7 @@
+
+
+## 1.1.3 (2023-12-25)
+
 ## [1.1.2](https://github.com/chris-lsn/pikpak-js-sdk/compare/1.1.1...1.1.2) (2023-12-24)
 
 ### Features
