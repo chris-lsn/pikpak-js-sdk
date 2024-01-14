@@ -41,14 +41,14 @@ export default class PikPak {
 		return this.refreshToken;
 	}
 
-	private async getHeaders() {
+	private async getHeaders(authRequired = true) {
 		const headers: Record<string, string> = {
 			"User-Agent":
 				"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36",
 			"Content-Type": "application/json; charset=utf-8",
 		};
 
-		if (this.accessToken) {
+		if (authRequired && this.accessToken) {
 			// check if access token is expired
 			const deocdedJwt = jwtDecode(this.accessToken);
 			const exp = deocdedJwt.exp;
@@ -107,7 +107,7 @@ export default class PikPak {
 		const refreshResponse = await fetch(refreshUrl, {
 			method: "POST",
 			body: JSON.stringify(refreshData),
-			headers: await this.getHeaders(),
+			headers: await this.getHeaders(false),
 		});
 
 		if (!refreshResponse.ok) {
